@@ -137,6 +137,9 @@ if (ls "$dir"/lib*/ld*.so* && [ -d "$dir/boot" ] || ls "$dir"/usr/lib*/ld*.so*) 
 	elif [ -e "$dir/etc/devuan_version" ]; then
 		short="Devuan"
 		long="$(printf "Devuan GNU/Linux (%s)\n" "$(cat "$dir/etc/devuan_version")")"
+	elif [ -e "$dir/etc/exherbo-release" ]; then
+		short="Exherbo"
+		long="Exherbo Linux"
 	else
 		short="Linux"
 		long="unknown Linux distribution"
