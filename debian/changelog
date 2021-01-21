@@ -1,4 +1,6 @@
-os-prober (1.78) UNRELEASED; urgency=medium
+os-prober (1.78) unstable; urgency=medium
+
+  * Team upload
 
   [ Cyril Brulebois ]
   * Remove Christian Perrier from Uploaders, with many thanks for all
