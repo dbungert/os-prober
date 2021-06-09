@@ -80,19 +80,18 @@ parse_grub_menu () {
 			initrd)
 				shift
 				initrd=""
-				for initrd_path in "$@"
-				do
-				# sed hack, as above
-				initrd_path="$(echo "$initrd_path" | sed 's/(.*)//')"
-				# Initrd same.
-				if [ "$partition" != "$bootpart" ]; then
-					initrd_path="/boot$initrd_path"
-				fi
-				if [ -z "$initrd" ]; then
-					initrd="$initrd_path"
-				else
-					initrd="$initrd $initrd_path"
-				fi
+				for initrd_path in "$@"; do
+					# sed hack, as above
+					initrd_path="$(echo "$initrd_path" | sed 's/(.*)//')"
+					# Initrd same.
+					if [ "$partition" != "$bootpart" ]; then
+						initrd_path="/boot$initrd_path"
+					fi
+					if [ -z "$initrd" ]; then
+						initrd="$initrd_path"
+					else
+						initrd="$initrd $initrd_path"
+					fi
 				done
 			;;
 			"}")
