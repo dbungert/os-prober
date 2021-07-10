@@ -1,3 +1,10 @@
+os-prober (1.79) unstable; urgency=medium
+
+  * Team upload
+  * Add mount dependency (Closes: #934713)
+
+ -- Hideki Yamane <henrich@debian.org>  Mon, 28 Jun 2021 22:02:45 +0900
+
 os-prober (1.78) unstable; urgency=medium
 
   * Team upload
