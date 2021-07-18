@@ -1,3 +1,9 @@
+os-prober (1.80) UNRELEASED; urgency=medium
+
+  * control: Enable mount dependency only where it is available (Linux).
+
+ -- Samuel Thibault <sthibault@debian.org>  Sun, 18 Jul 2021 17:53:48 +0200
+
 os-prober (1.79) unstable; urgency=medium
 
   * Team upload
