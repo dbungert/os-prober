@@ -15,9 +15,8 @@ log_output () {
 }
 
 : >"$OS_PROBER_TMP/dmraid-map"
-DMRAID=$(type dmraid >/dev/null 2>&1 || true)
-if [ "$DMRAID" ]; then
-	dmraid -r -c >"$OS_PROBER_TMP/dmraid-map"
+if type dmraid >/dev/null 2>&1; then
+	dmraid -r -c >"$OS_PROBER_TMP/dmraid-map" || true
 fi
 
 on_sataraid () {
