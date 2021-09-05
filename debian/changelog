@@ -9,6 +9,9 @@ os-prober (1.80) UNRELEASED; urgency=medium
   [ Gaël PORTAY ]
   * Fix "os-prober: call dmraid -r *once*".
 
+  [ Timo Gurr ]
+  * Add Exherbo Linux detection (Closes: #755804)
+
  -- Samuel Thibault <sthibault@debian.org>  Sun, 18 Jul 2021 17:53:48 +0200
 
 os-prober (1.79) unstable; urgency=medium
