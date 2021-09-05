@@ -1,6 +1,10 @@
 os-prober (1.80) UNRELEASED; urgency=medium
 
+  [ Samuel Thibault ]
   * control: Enable mount dependency only where it is available (Linux).
+
+  [ General Chaos ]
+  * Handle multiple initrd paths, as used in some distros
 
  -- Samuel Thibault <sthibault@debian.org>  Sun, 18 Jul 2021 17:53:48 +0200
 
