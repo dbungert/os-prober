@@ -1,7 +1,7 @@
 #!/bin/sh
 # Detects utility (hw vendor recovery) partitions.
 
-. /usr/share/os-prober/common.sh
+. ${OS_PROBER_SHARE:-/usr/share}/os-prober/common.sh
 
 partition="$1"
 mpoint="$2"

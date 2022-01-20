@@ -1,5 +1,5 @@
 #!/bin/sh
-. /usr/share/os-prober/common.sh
+. ${OS_PROBER_SHARE:-/usr/share}/os-prober/common.sh
 set -e
 
 partition="$1"

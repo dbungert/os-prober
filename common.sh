@@ -1,5 +1,7 @@
+export OS_PROBER_LIB=${OS_PROBER_LIB:-/usr/lib}
+
 newns () {
-  [ "$OS_PROBER_NEWNS" ] || exec /usr/lib/os-prober/newns "$0" "$@"
+  [ "$OS_PROBER_NEWNS" ] || exec $OS_PROBER_LIB/os-prober/newns "$0" "$@"
 }
 
 cleanup_tmpdir=false

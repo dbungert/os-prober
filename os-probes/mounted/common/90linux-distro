@@ -2,7 +2,7 @@
 # Test for linux distributions.
 set -e
 
-. /usr/share/os-prober/common.sh
+. ${OS_PROBER_SHARE:-/usr/share}/os-prober/common.sh
 
 partition="$1"
 dir="$2"

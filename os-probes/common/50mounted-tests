@@ -3,7 +3,7 @@
 set -e
 partition="$1"
 
-. /usr/share/os-prober/common.sh
+. ${OS_PROBER_SHARE:-/usr/share}/os-prober/common.sh
 
 do_unmount() {
 	if [ "$mounted" ]; then
@@ -72,7 +72,7 @@ if type grub-mount >/dev/null 2>&1 && \
 fi
 
 if [ "$mounted" ]; then
-	for test in /usr/lib/os-probes/mounted/*; do
+	for test in $OS_PROBER_LIB/os-probes/mounted/*; do
 		debug "running subtest $test"
 		if [ -f "$test" ] && [ -x "$test" ]; then
 			if "$test" "$partition" "$tmpmnt" "$type"; then

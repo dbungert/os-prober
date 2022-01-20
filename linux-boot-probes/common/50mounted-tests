@@ -1,6 +1,6 @@
 #!/bin/sh
 # Sub-tests that require a mounted partition.
-. /usr/share/os-prober/common.sh
+. ${OS_PROBER_SHARE:-/usr/share}/os-prober/common.sh
 set -e
 
 do_unmount() {
@@ -61,7 +61,7 @@ if [ "$mounted" ]; then
 	bootpart="${mountboot%% *}"
 	mounted="${mountboot#* }"
 
-	for test in /usr/lib/linux-boot-probes/mounted/*; do
+	for test in $OS_PROBER_LIB/linux-boot-probes/mounted/*; do
 		if [ -f "$test" ] && [ -x "$test" ]; then
 			debug "running $test $partition $bootpart $tmpmnt $type"
 			if $test "$partition" "$bootpart" "$tmpmnt" "$type"; then
