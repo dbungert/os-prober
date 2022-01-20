@@ -54,7 +54,7 @@ fi
 
 tmpmnt=/var/lib/os-prober/mount
 if [ ! -d "$tmpmnt" ]; then
-	mkdir "$tmpmnt"
+	mkdir -p "$tmpmnt"
 fi
 
 mounted=
